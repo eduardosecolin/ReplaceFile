@@ -1,12 +1,27 @@
-﻿<Window x:Class="ReplaceFile.MainWindow"
+﻿<Controls:MetroWindow x:Class="ReplaceFile.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ReplaceFile"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
-</Window>
+        Title="Renomear Arquivos" Height="581.869" Width="761.053" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition Width="0*"/>
+			<ColumnDefinition Width="0*"/>
+			<ColumnDefinition Width="0*"/>
+		</Grid.ColumnDefinitions>
+		<Button x:Name="btnSelecionar" Content="Selecionar Arquivos" HorizontalAlignment="Left" Margin="47,35,0,0" VerticalAlignment="Top" Width="155" Height="37" Foreground="#FF1D43EE" Click="BtnSelecionar_Click"/>
+		<Button x:Name="btnExecutar" Content="Renomear" HorizontalAlignment="Left" Margin="553,35,0,0" VerticalAlignment="Top" Width="155" Height="37" Foreground="#FF1D43EE" Click="BtnExecutar_Click"/>
+		<ListBox x:Name="lsFile" HorizontalAlignment="Left" Height="419" Margin="47,77,0,0" VerticalAlignment="Top" Width="661" BorderBrush="#FF1D43EE" BorderThickness="1"/>
+		<TextBox x:Name="txtNewName" HorizontalAlignment="Left" Height="26" Margin="358,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" Foreground="#FF1D43EE"/>
+		<Label x:Name="label" Content="Novo nome do arquivo:" HorizontalAlignment="Left" Margin="221,46,0,0" VerticalAlignment="Top" Foreground="#FF1D43EE" Height="26" Width="136"/>
+		<Button x:Name="btnExecutar_Copy" Content="Renomear" HorizontalAlignment="Left" Margin="553,35,0,0" VerticalAlignment="Top" Width="155" Height="37" Foreground="#FF1D43EE" Click="BtnExecutar_Click"/>
+		<Button x:Name="btnLimpar" Content="Limpar" HorizontalAlignment="Left" Margin="47,501,0,0" VerticalAlignment="Top" Width="81" Height="29" Foreground="#FF1D43EE" Click="BtnLimpar_Click"/>
+		<Image x:Name="image" HorizontalAlignment="Left" Height="37" Margin="633,501,0,0" VerticalAlignment="Top" Width="97" Source="Resources/zuc.jpg"/>
+
+	</Grid>
+</Controls:MetroWindow>
